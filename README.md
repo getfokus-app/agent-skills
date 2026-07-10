@@ -33,7 +33,7 @@ Pick one route per framework — installing both duplicates the same capabilitie
 ## Quick start
 
 ```bash
-npm install -g @fokus-app/mcp     # (until npm publish: build mcp-server and `npm link`)
+npm install -g @fokus-app/mcp
 fokus-mcp login
 fokus-mcp workspace               # pick your default workspace
 ```

@@ -17,9 +17,6 @@ agent's context).
    npm install -g @fokus-app/mcp
    ```
 
-   > Until the package is published to npm, install from source instead:
-   > `git clone <mcp-server repo> && cd mcp-server && npm ci && npm run build && npm link`
-
 3. Log in (one-time; tokens auto-refresh while used, and expire after ~7 idle days):
 
    ```bash
