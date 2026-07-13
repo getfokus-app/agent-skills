@@ -84,6 +84,22 @@ subcommand serves MCP over stdio):
 This exposes the same 44 tools plus two MCP prompts (`daily_planning`, `weekly_review`), but
 without the skill's usage guidance.
 
+To use the **hosted** MCP server instead of the local binary (if your OpenClaw build supports
+remote MCP), mint a token with `fokus-mcp token create` and point at the URL:
+
+```json5
+{
+  mcp: {
+    servers: {
+      fokus: {
+        url: "https://api.getfokus.com/mcp",
+        headers: { Authorization: "Bearer <token>" }
+      }
+    }
+  }
+}
+```
+
 ## Troubleshooting
 
 | Symptom | Fix |

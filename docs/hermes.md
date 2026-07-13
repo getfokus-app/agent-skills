@@ -51,6 +51,18 @@ mcp_servers:
 Restart Hermes; the Fokus tools appear alongside the built-in toolsets, plus two MCP prompts
 (`daily_planning`, `weekly_review`).
 
+If your Hermes build supports **remote MCP servers**, you can skip the local binary and point
+it at the hosted endpoint instead — mint a token with `fokus-mcp token create` (or from your
+Fokus account), then:
+
+```yaml
+mcp_servers:
+  fokus:
+    url: "https://api.getfokus.com/mcp"
+    headers:
+      Authorization: "Bearer <token>"
+```
+
 ## Option B — skill
 
 Copy (or symlink) the skill into Hermes's skills directory:
