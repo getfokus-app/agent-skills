@@ -81,7 +81,7 @@ subcommand serves MCP over stdio):
 }
 ```
 
-This exposes the same 44 tools plus two MCP prompts (`daily_planning`, `weekly_review`), but
+This exposes the same 45 tools plus two MCP prompts (`daily_planning`, `weekly_review`), but
 without the skill's usage guidance.
 
 To use the **hosted** MCP server instead of the local binary (if your OpenClaw build supports

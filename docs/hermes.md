@@ -4,7 +4,7 @@ Two ways to connect [Hermes Agent](https://github.com/nousresearch/hermes-agent)
 Research) to Fokus. Both need the `fokus-mcp` CLI logged in once; pick **one**.
 
 - **MCP server (recommended for Hermes):** native first-class integration — Hermes loads the
-  44 Fokus tools with their schemas directly.
+  45 Fokus tools with their schemas directly.
 - **Skill:** the same `fokus` skill OpenClaw uses; Hermes supports the
   [agentskills.io](https://agentskills.io) format.
 

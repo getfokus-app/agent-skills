@@ -1,6 +1,6 @@
 # Fokus tool reference
 
-All 44 tools invokable via `fokus-mcp tool <name> '<json-args>'`. Required parameters are
+All 45 tools invokable via `fokus-mcp tool <name> '<json-args>'`. Required parameters are
 marked `*`. For exact JSON schemas run `fokus-mcp tools --json`.
 
 Shared conventions: dates are ISO 8601 with a UTC offset; `estimatedTime` and
@@ -81,7 +81,7 @@ Defaults to the user's primary calendar.
 - `calendarId`, `bucketId`, `description` (markdown), `recurringPattern` (RRULE), `excludeFromScheduling`
 
 ### update_event
-- `eventId*` + any create_event field
+- `eventId*` + any create_event field except `recurringPattern`
 
 ### delete_event (destructive)
 Also removes externally-synced events (Google/Outlook) at the source.
@@ -166,7 +166,7 @@ Default: upcoming only, soonest first.
 ### create_reminder
 Absolute fire time; optionally record what it's relative to so it follows recurring activities.
 - `activityId*` (task/event id), `date*` (ISO)
-- `relativeTo` (`start|end|doDate|dueDate|scheduledStart`), `offsetMinutes` (integer, e.g. -15 = 15 min before)
+- `relativeTo` (`start|end|doDate|dueDate|scheduledStart`), `offsetMinutes` (integer, 0 or more: minutes before the `relativeTo` point, e.g. `15` = 15 min before)
 
 ### update_reminder
 - `reminderId*`, `date`, `relativeTo`, `offsetMinutes`
@@ -183,6 +183,12 @@ Cross-type search by title (and note content), grouped by type. Use list_* tools
 ### get_schedule
 Agenda for a range: events plus tasks planned (doDate) or scheduled (start), grouped by day. Ideal for "what does my day/week look like".
 - `startDate*`, `endDate*` (ISO dates), `includeCompleted` (boolean)
+
+## Fokus guide
+
+### search_fokus_guide
+Searches the official user guide (guide.getfokus.com) for how Fokus works: features, settings, integrations, add-ons, limits. Returns guide sections with a citable URL. Knows nothing about the user's own tasks, events or notes; use `search` or the list_* tools for those.
+- `query*` (string, 3–300 characters), `limit` (integer 1–8, default 5)
 
 ## Auto-scheduling
 
