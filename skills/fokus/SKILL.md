@@ -99,6 +99,7 @@ Data-model conventions: [references/conventions.md](references/conventions.md).
 - **Tags & reminders:** `list_tags`, `create_tag`, `list_reminders`, `create_reminder`,
   `update_reminder`, `delete_reminder`
 - **Overview:** `search` (cross-type by title/content), `get_schedule` (agenda for a range)
+- **Guide:** `search_fokus_guide` (answers how-to questions about Fokus itself from the user guide)
 - **Auto-scheduling:** `auto_schedule_tasks` → poll `get_scheduling_job` →
   `apply_scheduling_job` (or `cancel_scheduling_job`)
 

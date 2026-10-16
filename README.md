@@ -3,7 +3,7 @@
 Connect AI agent frameworks to [Fokus](https://getfokus.com) — tasks, calendar, notes,
 objectives, and AI auto-scheduling, driven by your personal AI assistant.
 
-There are two ways to connect, exposing the same 44 tools:
+There are two ways to connect, exposing the same 45 tools:
 
 - **Hosted (remote) MCP** — a Streamable HTTP endpoint at `https://api.getfokus.com/mcp`.
   Nothing to install; the client authenticates with a bearer token. Best for Claude Code and
